@@ -23,10 +23,15 @@
       display: flex;
       align-items: flex-start;
       gap: 2rem;
+      flex-wrap: wrap;
     }
     .profile-img {
       width: 160px;
       border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .main-info {
+      flex: 1 1 300px;
     }
     .main-info h1 {
       font-size: 2.5rem;
@@ -63,6 +68,24 @@
     }
     a:hover {
       text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: #666;
+    }
+    @media (max-width: 600px) {
+      .main-info h1 {
+        font-size: 1.8rem;
+      }
+      .top-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .main-info {
+        flex: none;
+      }
     }
   </style>
 </head>
